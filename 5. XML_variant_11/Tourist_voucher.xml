@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<agency xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  name="Travel With Me"
+  xsi:noNamespaceSchemaLocation="Tourist_voucher.xsd">
+  <tourist_voucher id="ere3y1">
+    <cost>899.9</cost>
+    <country>Egypt</country>
+    <days>10</days>
+    <hotel>
+      <isAirConditioningIncluded>true</isAirConditioningIncluded>
+      <isMealsIncluded>true</isMealsIncluded>
+      <isTvIncluded>true</isTvIncluded>
+      <meals>Al</meals>
+      <numberOfRooms>3</numberOfRooms>
+      <numberOfStarts>4</numberOfStarts>
+    </hotel>
+    <transport>plane</transport>
+    <type>holiday_tour</type>
+  </tourist_voucher>
+  <tourist_voucher id="ere3y2">
+    <cost>299.9</cost>
+    <country>Poland</country>
+    <days>5</days>
+    <hotel>
+      <isAirConditioningIncluded>false</isAirConditioningIncluded>
+      <isMealsIncluded>true</isMealsIncluded>
+      <isTvIncluded>true</isTvIncluded>
+      <meals>BB</meals>
+      <numberOfRooms>2</numberOfRooms>
+      <numberOfStarts>3</numberOfStarts>
+    </hotel>
+    <transport>car</transport>
+    <type>excursion</type>
+  </tourist_voucher>
+  <tourist_voucher id="ere3y3">
+    <cost>1399.9</cost>
+    <country>Spain</country>
+    <days>21</days>
+    <hotel>
+      <isAirConditioningIncluded>false</isAirConditioningIncluded>
+      <isMealsIncluded>true</isMealsIncluded>
+      <isTvIncluded>true</isTvIncluded>
+      <meals>HB</meals>
+      <numberOfRooms>1</numberOfRooms>
+      <numberOfStarts>2</numberOfStarts>
+    </hotel>
+    <transport>plane</transport>
+    <type>pilgrimage</type>
+  </tourist_voucher>
+  <tourist_voucher id="ere3y4">
+    <cost>2199.9</cost>
+    <country>USA</country>
+    <days>30</days>
+    <hotel>
+      <isAirConditioningIncluded>true</isAirConditioningIncluded>
+      <isMealsIncluded>true</isMealsIncluded>
+      <isTvIncluded>true</isTvIncluded>
+      <meals>Al</meals>
+      <numberOfRooms>2</numberOfRooms>
+      <numberOfStarts>3</numberOfStarts>
+    </hotel>
+    <transport>ship</transport>
+    <type>holiday_tour</type>
+  </tourist_voucher>
+</agency>

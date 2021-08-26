@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema
+  xmlns:xs="http://www.w3.org/2001/XMLSchema" elementFormDefault="qualified">
+
+  <xs:complexType name="newAgency">
+    <xs:attribute name="name" type="xs:string" use="required"/>
+    <xs:sequence>
+      <xs:element maxOccurs="unbounded" name="tourist_voucher" type="tourist_voucher"/>
+    </xs:sequence>
+  </xs:complexType>
+  <xs:complexType name="tourist_voucher">
+    <xs:attribute name="id" type="xs:ID" use="required"/>
+    <xs:sequence>
+      <xs:element name="type" type="type"/>
+      <xs:element name="country" type="xs:string"/>
+      <xs:element name="days" type="xs:positiveInteger"/>
+
+      <xs:element name="transport" type="transport"/>
+      <xs:element name="cost" type="xs:double"/>
+      <xs:element name="hotel">
+        <xs:complexType>
+          <xs:sequence>
+            <xs:element name="numberOfStarts" type="xs:positiveInteger"/>
+            <xs:element name="isMealsIncluded" type="xs:boolean"/>
+            <xs:element name="meals" type="meals"/>
+            <xs:element name="numberOfRooms" type="xs:positiveInteger"/>
+            <xs:element name="isTvIncluded" type="xs:boolean"/>
+            <xs:element name="isAirConditioningIncluded" type="xs:boolean"/>
+          </xs:sequence>
+        </xs:complexType>
+      </xs:element>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:element name="agency" type="newAgency"/>
+
+  <xs:simpleType name="type">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="holiday_tour"/>
+      <xs:enumeration value="excursion"/>
+      <xs:enumeration value="pilgrimage"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="days">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="30"/>
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="transport">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="car"/>
+      <xs:enumeration value="train"/>
+      <xs:enumeration value="plane"/>
+      <xs:enumeration value="ship"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="cost">
+    <xs:restriction base="xs:double">
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+
+  <xs:simpleType name="numberOfStarts">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="5"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="meals">
+    <xs:restriction base="xs:string">
+      <xs:enumeration value="HB"/>
+      <xs:enumeration value="BB"/>
+      <xs:enumeration value="Al"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="numberOfRooms">
+    <xs:restriction base="xs:positiveInteger">
+      <xs:maxInclusive value="5"/>
+      <xs:minInclusive value="1"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
